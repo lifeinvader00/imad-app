@@ -1,11 +1,12 @@
 var express = require("express");
 var morgan = require("morgan");
 var path = require("path");
+vat pug  = require("pug");
 
 var app = express();
 app.use(morgan("combined"));
 
-app.set("view engine", "pug");
+app.set("view engine", pug);
 app.set("views", "./views");
 
 app.get("/ui/style.css", function(req, res) {
