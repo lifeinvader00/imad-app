@@ -5,6 +5,7 @@ var path = require("path");
 var app = express();
 app.use(morgan("combined"));
 
+app.engine("pug", require("pug").__express);
 app.set("view engine", "pug");
 app.set("views", "./views");
 
