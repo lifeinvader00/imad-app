@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title}
+    link(rel="stylesheet", href="/ui/style.css")
+    link(rel="shortcut icon", href="/ui/madi.png", type="image/x-icon")
+  body
+    header.header
+      .container.flex.row.wrap
+        h1.header__title IMAD Fun App
+        img.header__logo(src="/ui/madi.png", alt="fun-logo")
+        .header__nav-links.flex.row.centered
+          if page === "home"
+            a.nav-links__link.active(href="/") Home
+          else 
+            a.nav-links__link(href="/") Home
+          if page === "articleOne"
+            a.nav-links__link.active(href="/article-one") Article One
+          else
+            a.nav-links__link(href="/article-one") Article One
+          if page === "articleTwo"
+            a.nav-links__link.active(href="/article-two") Article Two
+          else
+            a.nav-links__link(href="/article-two") Article Two
+          if page === "articleThree"
+            a.nav-links__link.active(href="/article-three") Article Three
+          else
+            a.nav-links__link(href="/article-three") Article Three
+    main
+      .container
+        block content
+    footer
+      .container
+        p Created By CodeFusion
+    
+    script(src="/ui/main.js")
+    
