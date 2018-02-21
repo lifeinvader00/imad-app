@@ -1,7 +1,7 @@
 var express = require("express");
 var morgan = require("morgan");
 var path = require("path");
-vat pug  = require("pug");
+var pug  = require("pug");
 
 var app = express();
 app.use(morgan("combined"));
